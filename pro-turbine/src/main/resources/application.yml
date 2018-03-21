@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/,http://localhost:8082/eureka/
+      
+      
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: pro-turbine
+    
+security:
+  basic:
+    enabled: false
+
+turbine:
+  cluster-name-expression: new String("default")
+  app-config: pro-product,eureka-client
